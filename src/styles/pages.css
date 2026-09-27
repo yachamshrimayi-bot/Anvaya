@@ -1,0 +1,708 @@
+/* =================================================================== HOME */
+.home {
+  position: relative;
+}
+.home-content {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  width: 100%;
+}
+/* Leave gutters for the scroll-driven robot on wide screens (it never crosses text). */
+@media (min-width: 1180px) {
+  .home-content {
+    width: min(1300px, calc(100vw - 300px));
+  }
+}
+.lane-gap {
+  height: 116px;
+}
+.inner.pad {
+  padding: clamp(28px, 4vw, 56px);
+}
+
+.hero-frame {
+  padding-bottom: 14px;
+}
+.hero {
+  min-height: min(880px, 92vh);
+  display: flex;
+  flex-direction: column;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 32px;
+  padding: 36px clamp(24px, 5vw, 72px) 0;
+  position: relative;
+  z-index: 3;
+}
+.hero-title {
+  font-size: clamp(48px, 6.2vw, 100px);
+  margin: 0;
+}
+.hero-accent {
+  background: var(--lime-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-side {
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.hero-copy {
+  font-size: 18px;
+  color: var(--text-2);
+  margin: 0;
+  max-width: 470px;
+  line-height: 1.6;
+}
+.hero-copy b {
+  color: var(--text);
+  font-weight: 600;
+}
+.hero-3d {
+  position: absolute;
+  right: 4%;
+  top: 30%;
+  width: min(640px, 52%);
+  height: 62%;
+  z-index: 2;
+  will-change: transform;
+}
+.hero-cards {
+  position: relative;
+  margin-top: auto;
+  height: 250px;
+  z-index: 3;
+}
+.hc {
+  position: absolute;
+  width: 250px;
+  will-change: transform;
+}
+.hc1 {
+  left: 3%;
+  bottom: -30px;
+  rotate: -9deg;
+}
+.hc2 {
+  left: calc(3% + 262px);
+  bottom: -54px;
+  rotate: 0deg;
+}
+.hc3 {
+  left: calc(3% + 524px);
+  bottom: -40px;
+  rotate: 8deg;
+}
+.hero-stat {
+  position: absolute;
+  right: clamp(24px, 5vw, 72px);
+  bottom: 42px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  z-index: 3;
+}
+.stat-num {
+  font-size: clamp(60px, 7vw, 110px);
+  line-height: 0.9;
+  background: linear-gradient(180deg, #fff, #9a9a95);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.stat-label {
+  font-size: 12.5px;
+  color: var(--text-2);
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  max-width: 260px;
+}
+.avatars {
+  display: flex;
+}
+.avatars span {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 3px solid var(--panel);
+  margin-left: -10px;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: #111;
+  position: relative;
+}
+.avatars span:first-child {
+  margin-left: 0;
+}
+.hero-notch {
+  position: absolute;
+  left: 50%;
+  bottom: -48px;
+  transform: translateX(-50%);
+  z-index: 6;
+  padding: 10px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #161616, #121212);
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 4vw, 64px);
+  align-items: center;
+}
+.cascade {
+  display: grid;
+  gap: 10px;
+}
+.cascade-step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  border-radius: 18px;
+  background: #121212;
+  border: 1px solid var(--line);
+  font-weight: 500;
+}
+.cascade-step:nth-child(1) {
+  margin-left: 0;
+}
+.cascade-step:nth-child(2) {
+  margin-left: 20px;
+}
+.cascade-step:nth-child(3) {
+  margin-left: 40px;
+}
+.cascade-step:nth-child(4) {
+  margin-left: 60px;
+  border-color: rgba(251, 191, 36, 0.35);
+}
+.cascade-step:nth-child(5) {
+  margin-left: 80px;
+  border-color: rgba(248, 113, 113, 0.45);
+  color: #fecaca;
+}
+.cascade-step .mono {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.loop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 34px;
+}
+.loop-card {
+  min-height: 230px;
+}
+.loop-k {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  opacity: 0.65;
+  margin-bottom: 6px;
+}
+
+.modules {
+  display: grid;
+  gap: 8px;
+  margin-top: 22px;
+}
+.module {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: #121212;
+  border: 1px solid var(--line);
+  font-size: 14px;
+}
+.module .mono {
+  color: var(--lime);
+  font-size: 12px;
+}
+.mesh-svg {
+  width: 100%;
+  max-width: 520px;
+  justify-self: center;
+}
+
+.live-block {
+  padding: 0;
+}
+.live-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  padding: clamp(24px, 3.5vw, 48px);
+  flex-wrap: wrap;
+}
+.live-canvas {
+  height: min(620px, 70vh);
+  border-top: 1px solid var(--line);
+}
+
+.math-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.math-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 30px;
+}
+.math-card {
+  background: #111;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.math-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+.math-tex {
+  overflow-x: auto;
+  padding: 6px 0;
+  font-size: 0.95em;
+}
+.math-tex .katex-display {
+  margin: 0.4em 0;
+}
+.docs-cta {
+  margin-top: 22px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  padding: 20px 26px;
+  border-radius: 22px;
+  border: 1px solid rgba(201, 244, 107, 0.35);
+  background: linear-gradient(90deg, rgba(201, 244, 107, 0.1), rgba(134, 231, 166, 0.03));
+  cursor: pointer;
+  color: var(--text-2);
+  font-size: 15px;
+}
+.docs-cta b {
+  color: var(--lime);
+}
+.docs-cta:hover {
+  border-color: var(--lime);
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 30px;
+}
+.result {
+  background: #111;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 20px 22px;
+}
+.result-label {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.bar-row {
+  display: grid;
+  grid-template-columns: 110px 1fr 70px;
+  gap: 12px;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 13px;
+}
+.bar-name {
+  color: var(--text-2);
+}
+.bar {
+  height: 12px;
+  background: #1c1c1c;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.bar > div {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.bar-val {
+  text-align: right;
+}
+.result-delta {
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0b0b0b;
+  background: var(--lime-grad);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.cta {
+  text-align: center;
+  padding: 72px 24px !important;
+}
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 40px;
+}
+
+@media (max-width: 1100px) {
+  .hero-grid,
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+  .hero-3d {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    right: auto;
+    top: auto;
+  }
+  .hero-stat {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    padding: 0 24px 60px;
+  }
+  .loop-grid,
+  .math-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-cards {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .loop-grid,
+  .math-grid,
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =================================================================== DOCS */
+.docs {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  align-items: start;
+}
+.docs-nav {
+  border-right: 1px solid var(--line);
+  padding: 16px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  position: sticky;
+  top: 0;
+  align-self: start;
+}
+.docs-nav button {
+  text-align: left;
+  border: none;
+  background: none;
+  padding: 9px 12px;
+  border-radius: 10px;
+  color: var(--text-2);
+  cursor: pointer;
+  font-size: 13.5px;
+}
+.docs-nav button.on {
+  background: #1b1b1b;
+  color: var(--text);
+  box-shadow: inset 2px 0 0 var(--lime);
+}
+.docs-body {
+  padding: 26px 32px 32px;
+  line-height: 1.7;
+}
+.docs-cols {
+  display: grid;
+  gap: 26px;
+}
+.docs-cols.both {
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  align-items: start;
+}
+.docs-cols > div {
+  min-width: 0;
+}
+.docs-cols.both > div:last-child {
+  position: sticky;
+  top: 16px;
+}
+.doc-eq .katex-display {
+  margin: 0.5em 0;
+}
+.doc-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.doc-label.lime {
+  color: var(--lime);
+}
+.doc-eq {
+  background: #111;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 6px 14px;
+  margin: 12px 0;
+  overflow-x: auto;
+}
+.doc-simple {
+  background: linear-gradient(160deg, rgba(201, 244, 107, 0.09), rgba(134, 231, 166, 0.03));
+  border: 1px solid rgba(201, 244, 107, 0.25);
+  border-radius: 18px;
+  padding: 18px 20px;
+  font-size: 15px;
+  color: var(--text);
+}
+.doc-formal p,
+.doc-formal li {
+  color: var(--text-2);
+}
+.doc-formal code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: #1a1a1a;
+  padding: 1px 6px;
+  border-radius: 6px;
+}
+@media (max-width: 900px) {
+  .docs {
+    grid-template-columns: 1fr;
+  }
+  .docs-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    position: static;
+  }
+  .docs-cols.both {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =================================================================== TOUR */
+.tour-root {
+  position: fixed;
+  inset: 0;
+  z-index: 950;
+}
+.tour-mask {
+  position: absolute;
+  inset: 0;
+}
+.tour-glow {
+  filter: drop-shadow(0 0 10px rgba(201, 244, 107, 0.7));
+}
+.tour-card {
+  position: absolute;
+  width: 360px;
+  background: #121212;
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 18px 20px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+}
+.tour-dots {
+  display: flex;
+  gap: 6px;
+  margin-top: 14px;
+}
+.tour-dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #333;
+  cursor: pointer;
+}
+.tour-dots span.on {
+  background: var(--lime);
+  width: 20px;
+  border-radius: 6px;
+}
+
+/* =================================================================== TWIN TAGS */
+.twin-tag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(10, 10, 10, 0.82);
+  border: 1px solid;
+  border-radius: 999px;
+  padding: 2px 8px 2px 5px;
+  font: 700 10.5px var(--font-mono);
+  color: #eee;
+  white-space: nowrap;
+  backdrop-filter: blur(4px);
+  transform: translateY(-4px);
+}
+.twin-tag.sel {
+  background: #fff;
+  color: #111;
+}
+.twin-tag .sw {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.twin-tag .act {
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.twin-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.twin-labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.twin-labels .twin-tag {
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform;
+}
+
+/* hand cursors on the 3D twin: open palm to orbit / pinch-zoom, closed while dragging */
+.twin-wrap canvas {
+  cursor: grab;
+  touch-action: none;
+}
+.twin-wrap canvas:active {
+  cursor: grabbing;
+}
+body[data-robot-hover='1'] .twin-wrap canvas {
+  cursor: pointer;
+}
+[data-tool='block'] .twin-wrap canvas,
+[data-tool='deadzone'] .twin-wrap canvas,
+[data-tool='order'] .twin-wrap canvas {
+  cursor: crosshair;
+}
+
+.twin-wrap.view-only canvas {
+  cursor: default;
+}
+
+/* math cards: never wider than their column; long equations scroll inside the card */
+.math-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.math-card {
+  min-width: 0;
+}
+.math-tex {
+  overflow-x: auto;
+  overflow-y: hidden;
+  font-size: 0.86em;
+  padding-bottom: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: #3a3a3a transparent;
+  -webkit-overflow-scrolling: touch;
+}
+.math-tex::-webkit-scrollbar {
+  height: 6px;
+}
+.math-tex::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 6px;
+}
+.math-tex .katex-display {
+  text-align: left;
+  width: max-content;
+  min-width: 100%;
+}
+@media (max-width: 1500px) {
+  .math-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 760px) {
+  .math-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* hero v2: taller, with dedicated space for the robot (no overlaps) */
+.hero {
+  min-height: max(1000px, 100vh);
+}
+.hero-grid {
+  padding-top: 56px;
+}
+.hero-3d {
+  top: auto;
+  bottom: 190px;
+  right: 3%;
+  width: min(760px, 50%);
+  height: 480px;
+}
+.hero-cards {
+  height: 300px;
+}
+.hc {
+  width: 240px;
+}
+.hc1 {
+  left: 3%;
+  bottom: -20px;
+}
+.hc2 {
+  left: calc(3% + 250px);
+  bottom: -44px;
+}
+.hc3 {
+  left: calc(3% + 500px);
+  bottom: -30px;
+}
+.hero-stat {
+  bottom: 64px;
+}
+@media (max-width: 1100px) {
+  .hero {
+    min-height: 0;
+  }
+  .hero-3d {
+    bottom: auto;
+    height: 380px;
+  }
+}
